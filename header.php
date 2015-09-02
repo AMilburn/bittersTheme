@@ -24,7 +24,7 @@
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="site-logo" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">             
               <img src="<?php echo get_theme_mod( 'bitters_logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
             </a>
-            <?php else : ?> <!-- NEED TO FIGURE OUT HOW TO HIDE TEXT IF IMAGE ISNT PRESENT -->
+            <?php else : ?>
             <h1>
               <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
                 <?php bloginfo( 'name' ); ?>

@@ -1,27 +1,22 @@
 .contact-post-text {
-	padding: 5%;
+	width: 70%;
+	margin: 0 auto;
+	@media all and (max-width: 550px) {
+		width: 100%;
+	}
 	h2 {
 		@include header-font;
 	}
 }
-form.wpcf7-form {
-	width: 70em;
-	@media all and (max-width: 900px) {
-		width: 90%;
-	}
-	@media all and (max-width: 550px) {
-		width: 100%;
-	}
-	.wpcf7-form-control {
-		width: 100%;
-		padding: .5em;
-		border-radius: 3px;
-		background: $ltGrey;
-		border: none;
-	}
-	.wpcf7-submit {
-		@include btn;
-	}
+.wpcf7-form-control {
+	width: 100%;
+	padding: .5em;
+	border-radius: 3px;
+	background: $ltGrey;
+	border: none;
+}
+.wpcf7-submit {
+	@include btn;
 }
 .contact-post-text {
 	padding: 2% 5%;

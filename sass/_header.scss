@@ -1,65 +1,58 @@
+// Hero Image
 .custom-hero-image {
 	position: relative;
-	height: 450px;
+	height: 650px;
 	background-position: center;
+	background-attachment: fixed;
 	background-repeat: no-repeat;
 	width: 100%;
 	background-size: cover;
-	padding: 10% 15%;
+	padding: 15% 5%;
 	@media all and (max-width: 700px) {
-		height: 350px;
+		height: 480px;
 		@media all and (max-width: 550px) {
-			height: 250px;
-		}
-		@media all and (max-width: 400px) {
-			height: 200px;
+			height: 350px;
+			background-attachment: initial;
+			padding: 20% 5%;
 		}
 	}
-	//convenience styles for floating title on header image
 	.site-title{
 		@include title-font;
-		font-size: 8em;
-		font-weight: 400;
+		font-size: 11em;
+		font-weight: 600;
 		letter-spacing: 0.2em;
-		text-shadow: 2px 2px #333;
-		@media all and (max-width: 550px) {
+		color: $drkGrey;
+		text-shadow: 2px 2px #fff;
+		text-align: center;
+		@media all and (max-width: 700px) {
 			font-size: 6em;
 		}
 		@media all and (max-width: 400px) {
 			font-size: 4.5em;
 		}
 	}
-	//convenience styles for floating title on header image
 	.site-description{
 		@include title-font;
-		text-shadow: 2px 2px #333;
-	}
-	//end convenience styles for floating title on header image
-}
-.textwidget {
-	padding: 10% 20%;
-	list-style: none;
-	font-size: 2em;
-	line-height: 1.7em;
-	letter-spacing: 2px;
-	text-align: center;
-	background: url(images/dark_wall.png);
-	@media all and (max-width: 700px) {
-		padding: 10%;
-		font-size: 1.7em;
+		color: $drkGrey;
+		text-align: center;
+		font-size: 3em;
+		text-shadow: 2px 2px #fff;
+		@media all and (max-width: 400px) {
+			font-size: 1.5em;
+		}
 	}
 }
+// END Hero Image
+
+// Main Page / About Section
 .mainPost {
-	padding: 4em 0;
-	background-size: cover;
+	padding: 10% 0;
 	.postText {
-		background: $ltGrey;
-		padding: 5%;
-		width: 50%;
-		color: #222;
-		margin: 0 10%;
+		width: 70%;
+		color: $ltGrey;
+		margin: 0 auto;
 		h2 {
-			@include bold-font;
+			@include header-font;
 		}
 		p {
 			font-family: 'Quattrocento', serif;
@@ -71,15 +64,49 @@
 		}
 	}
 }
+// End main page / About Section
+
+// Featured blog post section
+.blog-preview {
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	.featured-post {
+		width: 40%;
+		float: left;
+		height: 300px;
+		margin: 10% 5%;
+		background-size: cover;
+		display: flex;
+		align-content: center;
+		justify-content: center;
+		@media all and (max-width: 700px) {
+			float: none;
+			width: 80%;
+			margin: 10% auto;
+		}
+		.post-title {
+			background-color: rgba(0,0,0,0.7);	
+			align-self: center;
+			padding: 10px 20px;
+			h2 {
+				@include header-font;
+				text-align: center;
+			}
+		}	
+	}
+}
+
+// End Featured blog post section
+
+// Instagram Feed
 #sbi_images {
 	display: flex;
-	@media all and (max-width: 550px) {
-		flex-wrap: wrap;
-	}
+	flex-wrap: wrap;
 	.sbi_item {
-		@media all and (max-width: 550px) {
+		width: 16.66%;
+		@media all and (max-width: 700px) {
 			width: 25%;
-		}	
+		}
 	}
 }
 #sbi_load {

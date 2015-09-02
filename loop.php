@@ -22,37 +22,35 @@
 					<div class="left-side-post">
 						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 							<h2 class="entry-title">
-				        <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark">
-				          <?php the_title(); ?>
-				        </a>
-				      </h2>
-							<?php echo the_post_thumbnail(); ?>
+					        	<a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark">
+					          	<?php the_title(); ?>
+					        	</a>
+				     		</h2>
 							<section class="entry-content">
 								<?php the_excerpt(); ?>
 								<?php wp_link_pages( array(
-				          'before' => '<div class="page-link"> Pages:',
-				          'after' => '</div>'
-				        )); ?>
+				          		'before' => '<div class="page-link"> Pages:',
+				          		'after' => '</div>'
+				        		)); ?>
 							</section><!-- .entry-content -->
 						</article><!-- #post-## -->
 					</div>
 				<?php } else {?>
 					<div class="right-side-post">
-							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-								<h2 class="entry-title">
-					        <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark">
-					          <?php the_title(); ?>
-					        </a>
-					      </h2>
-								<?php echo the_post_thumbnail(); ?>
-								<section class="entry-content">
-									<?php the_excerpt(); ?>
-									<?php wp_link_pages( array(
-					          'before' => '<div class="page-link"> Pages:',
-					          'after' => '</div>'
-					        )); ?>
-								</section><!-- .entry-content -->
-							</article><!-- #post-## -->
+						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+							<h2 class="entry-title">
+					        	<a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark">
+					          	<?php the_title(); ?>
+					        	</a>
+					     	 </h2>	
+							<section class="entry-content">
+								<?php the_excerpt(); ?>
+								<?php wp_link_pages( array(
+				          		'before' => '<div class="page-link"> Pages:',
+				          		'after' => '</div>'
+				        		)); ?>
+							</section><!-- .entry-content -->
+						</article><!-- #post-## -->
 					</div>		
 				<?php } ?>
 		<?php comments_template( '', true ); ?>
